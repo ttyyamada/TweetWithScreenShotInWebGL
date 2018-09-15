@@ -1,0 +1,13 @@
+Library
+Temp
+*.csproj
+*.sln
+obj
+*.userprefs
+mod_pbxproj.pyc
+mod_pbxproj.pyc.meta
+BuildIOS
+.ftpconfig
+AssetBundleSources
+*.unityproj
+*.apk
