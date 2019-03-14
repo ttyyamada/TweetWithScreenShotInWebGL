@@ -11,6 +11,7 @@ namespace TweetWithScreenShot
     {
 
         private static TweetManager sinstance;
+        public string[] hashTags;
 
         [SerializeField]
         private string clientID;
@@ -76,9 +77,14 @@ namespace TweetWithScreenShot
             }
 
             text += " " + UploadedURL;
+            string hashtags = "&hashtags=";
+            if (sinstance.hashTags.Length > 0)
+            {
+                hashtags += string.Join (",", sinstance.hashTags);
+            }
 
             // ツイッター投稿用URL
-            string TweetURL = "http://twitter.com/intent/tweet?text=" + text;
+            string TweetURL = "http://twitter.com/intent/tweet?text=" + text + hashtags;
 
 #if UNITY_WEBGL && !UNITY_EDITOR
             Application.ExternalEval(string.Format("window.open('{0}','_blank')", TweetURL));
