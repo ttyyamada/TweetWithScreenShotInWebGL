@@ -1,5 +1,6 @@
 # TweetWithScreenShotInWebGL
 UnityのWebGLでサムネイル付き画像ツイートをするサンプルです
+おそらくモバイルや他のいろんな環境でも動くと思いますが動作はあまり確認していません
 
 導入方法はこちらにとてもわかりやすいものを書いていただきました！
 https://unity-senpai.hatenablog.com/entry/2019/07/07/130111
