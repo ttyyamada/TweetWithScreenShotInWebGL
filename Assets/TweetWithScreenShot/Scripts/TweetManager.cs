@@ -4,12 +4,18 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Xml.Linq;
 using System;
+#if UNITY_WEBGL && !UNITY_EDITOR
+using System.Runtime.InteropServices;
+#endif
 
 namespace TweetWithScreenShot
 {
     public class TweetManager : MonoBehaviour
     {
-
+#if UNITY_WEBGL && !UNITY_EDITOR
+        [DllImport("__Internal")]
+        private static extern void OpenWindow(string url);
+#endif
         private static TweetManager sinstance;
         public string[] hashTags;
 
@@ -87,7 +93,7 @@ namespace TweetWithScreenShot
             string TweetURL = "http://twitter.com/intent/tweet?text=" + text + hashtags;
 
 #if UNITY_WEBGL && !UNITY_EDITOR
-            Application.ExternalEval(string.Format("window.open('{0}','_blank')", TweetURL));
+            OpenWindow(TweetURL);
 #elif UNITY_EDITOR
             System.Diagnostics.Process.Start (TweetURL);
 #else
