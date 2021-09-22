@@ -13,6 +13,10 @@ StartCoroutine(TweetWithScreenShot.TweetManager.TweetWithScreenShot("Hello!"));
 
 という風に呼び出します
 
+*Build&Runで実行した際、imgurのAPIがエラーを返すことを確認しています。imgurの仕様として、localhostからのアクセスは弾かれるので
+
+Editor上か、unityroomなどにアップしてご確認ください
+
 ## アップデート情報
 ### 2021/09/22
 
