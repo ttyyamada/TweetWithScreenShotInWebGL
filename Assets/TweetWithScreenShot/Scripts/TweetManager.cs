@@ -82,7 +82,7 @@ namespace TweetWithScreenShot
                 UploadedURL = url;
             }
 
-            text += " " + "\n" + sinstance.url;
+            text += " " + UploadedURL;
             string hashtags = "&hashtags=";
             if (sinstance.hashTags.Length > 0)
             {
@@ -90,7 +90,7 @@ namespace TweetWithScreenShot
             }
 
             // ツイッター投稿用URL
-            string TweetURL = "http://twitter.com/intent/tweet?text=" + text + hashtags + " " + UploadedURL;
+            string TweetURL = "http://twitter.com/intent/tweet?text=" + text + hashtags;
 
 #if UNITY_WEBGL && !UNITY_EDITOR
             OpenWindow(TweetURL);
