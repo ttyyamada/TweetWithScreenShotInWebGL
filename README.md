@@ -20,7 +20,11 @@ Editor上か、unityroomなどにアップしてご確認ください
 ## アップデート情報
 ### 2021/12/25
 https://github.com/ttyyamada/TweetWithScreenShotInWebGL/issues/3
+
 こちらのissueに対応しました
+
+Unity2021.2で動かなくなっていたものの対応になります
+
 以前のバージョンでも動くことを確認しております
 
 ### 2021/09/22
